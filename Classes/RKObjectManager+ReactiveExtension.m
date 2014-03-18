@@ -53,8 +53,8 @@ static const NSString* kSMReactiveRestKitAssociatedProgressBlock = @"kSMReactive
 
 
 /**
- Make innerSubscriber visible (is private).
- @warning this could be dangerous!
+ Make innerSubscriber visible (is private by default).
+ @warning this could be dangerous if anything in RACPassthroughSubscriber will change in future!
  */
 @interface RACPassthroughSubscriber (SMReactiveRestkit)
 @property (nonatomic, strong, readonly) id<RACSubscriber, RACSubscriberSMProgress> innerSubscriber;
@@ -66,13 +66,10 @@ static const NSString* kSMReactiveRestKitAssociatedProgressBlock = @"kSMReactive
 - (RACDisposable *)subscribeNext:(void (^)(id))nextBlock error:(void (^)(NSError *))errorBlock progress:(void (^)(NSNumber *))progressBlock {
     return [self subscribeNext:nextBlock error:errorBlock progress:progressBlock completed:NULL];
 }
-- (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock error:(void (^)(NSError *error))errorBlock  progress:(void (^)(NSNumber *progress))progressBlock completed:(void (^)(void))completedBlock{
-	NSCParameterAssert(nextBlock != NULL);
-	NSCParameterAssert(errorBlock != NULL);
-	NSCParameterAssert(progressBlock != NULL);	
-	RACSubscriber *o = [RACSubscriber subscriberWithNext:nextBlock error:errorBlock completed:completedBlock];
-    o.SM_progress = progressBlock;
-	return [self subscribe:o];
+- (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock error:(void (^)(NSError *error))errorBlock  progress:(void (^)(NSNumber *progress))progressBlock completed:(void (^)(void))completedBlock{	
+	RACSubscriber *subscriber = [RACSubscriber subscriberWithNext:nextBlock error:errorBlock completed:completedBlock];
+    subscriber.SM_progress = progressBlock;
+	return [self subscribe:subscriber];
 }
 @end
 
@@ -86,6 +83,27 @@ static const NSString* kSMReactiveRestKitAssociatedProgressBlock = @"kSMReactive
 - (RACSignal*) rac_postPath:(NSString*) path parameters:(NSDictionary*) parameters {
     return [self rac_requestPath:path parameters:parameters method:RKRequestMethodPOST object:nil];
 }
+- (RACSignal*) rac_deletePath:(NSString*) path parameters:(NSDictionary*) parameters {
+    return [self rac_requestPath:path parameters:parameters method:RKRequestMethodDELETE object:nil];
+}
+- (RACSignal*) rac_putPath:(NSString*) path parameters:(NSDictionary*) parameters {
+    return [self rac_requestPath:path parameters:parameters method:RKRequestMethodPUT object:nil];
+}
+- (RACSignal*) rac_patchPath:(NSString*) path parameters:(NSDictionary*) parameters {
+    return [self rac_requestPath:path parameters:parameters method:RKRequestMethodPATCH object:nil];
+}
+- (RACSignal*) rac_headPath:(NSString*) path parameters:(NSDictionary*) parameters {
+    return [self rac_requestPath:path parameters:parameters method:RKRequestMethodHEAD object:nil];
+}
+- (RACSignal*) rac_optionsPath:(NSString*) path parameters:(NSDictionary*) parameters {
+    return [self rac_requestPath:path parameters:parameters method:RKRequestMethodOPTIONS object:nil];
+}
++ (NSDictionary*) multipartDataDictionaryWithData:(NSData*) data formName:(NSString*) formName fileName:(NSString*) fileName mimeType:(NSString*) mimeType {
+    if (!data || !formName || !fileName || !mimeType) return nil;
+    return  @{kSMReactiveRestKitMultipartData:data,kSMReactiveRestKitMultipartFilename:fileName,kSMReactiveRestKitMultipartName:formName,kSMReactiveRestKitMultipartMIMEType:mimeType};
+    
+}
+
 - (RACSignal*) rac_requestPath:(NSString*) path parameters:(NSDictionary*) parameters method:(RKRequestMethod) method object:(id)object{
     @weakify(self);
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
