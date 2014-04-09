@@ -13,14 +13,20 @@
 		7B2DB2CD18D1AD3C006CEEB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DB2CC18D1AD3C006CEEB1 /* UIKit.framework */; };
 		7B2DB2D318D1AD3C006CEEB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B2DB2D118D1AD3C006CEEB1 /* InfoPlist.strings */; };
 		7B2DB2D518D1AD3C006CEEB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DB2D418D1AD3C006CEEB1 /* main.m */; };
-		7B2DB2D918D1AD3C006CEEB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DB2D818D1AD3C006CEEB1 /* AppDelegate.m */; };
 		7B2DB2DB18D1AD3C006CEEB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2DB2DA18D1AD3C006CEEB1 /* Images.xcassets */; };
 		7B2DB2E218D1AD3C006CEEB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DB2E118D1AD3C006CEEB1 /* XCTest.framework */; };
 		7B2DB2E318D1AD3C006CEEB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DB2C818D1AD3C006CEEB1 /* Foundation.framework */; };
 		7B2DB2E418D1AD3C006CEEB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2DB2CC18D1AD3C006CEEB1 /* UIKit.framework */; };
 		7B2DB2EC18D1AD3C006CEEB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B2DB2EA18D1AD3C006CEEB1 /* InfoPlist.strings */; };
 		7B2DB2EE18D1AD3C006CEEB1 /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DB2ED18D1AD3C006CEEB1 /* ExampleTests.m */; };
-		7B2DB2FD18D1C3C2006CEEB1 /* SMAppStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DB2FC18D1C3C2006CEEB1 /* SMAppStoreModel.m */; };
+		7BB9D26118F3EF6D00B5AC66 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB9D25318F3EF6D00B5AC66 /* apple.png */; };
+		7BB9D26218F3EF6D00B5AC66 /* STMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9D25518F3EF6D00B5AC66 /* STMAppDelegate.m */; };
+		7BB9D26318F3EF6D00B5AC66 /* STMAppStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9D25718F3EF6D00B5AC66 /* STMAppStoreModel.m */; };
+		7BB9D26418F3EF6D00B5AC66 /* STMAppStoreResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9D25918F3EF6D00B5AC66 /* STMAppStoreResponse.m */; };
+		7BB9D26518F3EF6D00B5AC66 /* STMListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9D25B18F3EF6D00B5AC66 /* STMListViewController.m */; };
+		7BB9D26618F3EF6D00B5AC66 /* STMMovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9D25D18F3EF6D00B5AC66 /* STMMovieTableViewCell.m */; };
+		7BB9D26718F3EF6D00B5AC66 /* STMQuickRestKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BB9D25E18F3EF6D00B5AC66 /* STMQuickRestKit.xcdatamodeld */; };
+		7BB9D26818F3EF6D00B5AC66 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB9D26018F3EF6D00B5AC66 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,16 +50,25 @@
 		7B2DB2D218D1AD3C006CEEB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B2DB2D418D1AD3C006CEEB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B2DB2D618D1AD3C006CEEB1 /* Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Prefix.pch"; sourceTree = "<group>"; };
-		7B2DB2D718D1AD3C006CEEB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7B2DB2D818D1AD3C006CEEB1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7B2DB2DA18D1AD3C006CEEB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7B2DB2E018D1AD3C006CEEB1 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2DB2E118D1AD3C006CEEB1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7B2DB2E918D1AD3C006CEEB1 /* ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		7B2DB2EB18D1AD3C006CEEB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B2DB2ED18D1AD3C006CEEB1 /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
-		7B2DB2FB18D1C3C2006CEEB1 /* SMAppStoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAppStoreModel.h; sourceTree = "<group>"; };
-		7B2DB2FC18D1C3C2006CEEB1 /* SMAppStoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAppStoreModel.m; sourceTree = "<group>"; };
+		7BB9D25318F3EF6D00B5AC66 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		7BB9D25418F3EF6D00B5AC66 /* STMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMAppDelegate.h; sourceTree = "<group>"; };
+		7BB9D25518F3EF6D00B5AC66 /* STMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMAppDelegate.m; sourceTree = "<group>"; };
+		7BB9D25618F3EF6D00B5AC66 /* STMAppStoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMAppStoreModel.h; sourceTree = "<group>"; };
+		7BB9D25718F3EF6D00B5AC66 /* STMAppStoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMAppStoreModel.m; sourceTree = "<group>"; };
+		7BB9D25818F3EF6D00B5AC66 /* STMAppStoreResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMAppStoreResponse.h; sourceTree = "<group>"; };
+		7BB9D25918F3EF6D00B5AC66 /* STMAppStoreResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMAppStoreResponse.m; sourceTree = "<group>"; };
+		7BB9D25A18F3EF6D00B5AC66 /* STMListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMListViewController.h; sourceTree = "<group>"; };
+		7BB9D25B18F3EF6D00B5AC66 /* STMListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMListViewController.m; sourceTree = "<group>"; };
+		7BB9D25C18F3EF6D00B5AC66 /* STMMovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMMovieTableViewCell.h; sourceTree = "<group>"; };
+		7BB9D25D18F3EF6D00B5AC66 /* STMMovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMMovieTableViewCell.m; sourceTree = "<group>"; };
+		7BB9D25F18F3EF6D00B5AC66 /* STMQuickRestKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = STMQuickRestKit.xcdatamodel; sourceTree = "<group>"; };
+		7BB9D26018F3EF6D00B5AC66 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +131,19 @@
 		7B2DB2CE18D1AD3C006CEEB1 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				7B2DB2D718D1AD3C006CEEB1 /* AppDelegate.h */,
-				7B2DB2D818D1AD3C006CEEB1 /* AppDelegate.m */,
-				7B2DB2FB18D1C3C2006CEEB1 /* SMAppStoreModel.h */,
-				7B2DB2FC18D1C3C2006CEEB1 /* SMAppStoreModel.m */,
+				7BB9D25318F3EF6D00B5AC66 /* apple.png */,
+				7BB9D25418F3EF6D00B5AC66 /* STMAppDelegate.h */,
+				7BB9D25518F3EF6D00B5AC66 /* STMAppDelegate.m */,
+				7BB9D25618F3EF6D00B5AC66 /* STMAppStoreModel.h */,
+				7BB9D25718F3EF6D00B5AC66 /* STMAppStoreModel.m */,
+				7BB9D25818F3EF6D00B5AC66 /* STMAppStoreResponse.h */,
+				7BB9D25918F3EF6D00B5AC66 /* STMAppStoreResponse.m */,
+				7BB9D25A18F3EF6D00B5AC66 /* STMListViewController.h */,
+				7BB9D25B18F3EF6D00B5AC66 /* STMListViewController.m */,
+				7BB9D25C18F3EF6D00B5AC66 /* STMMovieTableViewCell.h */,
+				7BB9D25D18F3EF6D00B5AC66 /* STMMovieTableViewCell.m */,
+				7BB9D25E18F3EF6D00B5AC66 /* STMQuickRestKit.xcdatamodeld */,
+				7BB9D26018F3EF6D00B5AC66 /* Storyboard.storyboard */,
 				7B2DB2DA18D1AD3C006CEEB1 /* Images.xcassets */,
 				7B2DB2CF18D1AD3C006CEEB1 /* Supporting Files */,
 			);
@@ -233,6 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B2DB2D318D1AD3C006CEEB1 /* InfoPlist.strings in Resources */,
+				7BB9D26818F3EF6D00B5AC66 /* Storyboard.storyboard in Resources */,
+				7BB9D26118F3EF6D00B5AC66 /* apple.png in Resources */,
 				7B2DB2DB18D1AD3C006CEEB1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,9 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B2DB2D918D1AD3C006CEEB1 /* AppDelegate.m in Sources */,
+				7BB9D26618F3EF6D00B5AC66 /* STMMovieTableViewCell.m in Sources */,
+				7BB9D26418F3EF6D00B5AC66 /* STMAppStoreResponse.m in Sources */,
 				7B2DB2D518D1AD3C006CEEB1 /* main.m in Sources */,
-				7B2DB2FD18D1C3C2006CEEB1 /* SMAppStoreModel.m in Sources */,
+				7BB9D26518F3EF6D00B5AC66 /* STMListViewController.m in Sources */,
+				7BB9D26218F3EF6D00B5AC66 /* STMAppDelegate.m in Sources */,
+				7BB9D26318F3EF6D00B5AC66 /* STMAppStoreModel.m in Sources */,
+				7BB9D26718F3EF6D00B5AC66 /* STMQuickRestKit.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +534,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7BB9D25E18F3EF6D00B5AC66 /* STMQuickRestKit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7BB9D25F18F3EF6D00B5AC66 /* STMQuickRestKit.xcdatamodel */,
+			);
+			currentVersion = 7BB9D25F18F3EF6D00B5AC66 /* STMQuickRestKit.xcdatamodel */;
+			path = STMQuickRestKit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7B2DB2BD18D1AD3C006CEEB1 /* Project object */;
 }

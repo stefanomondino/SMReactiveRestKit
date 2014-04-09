@@ -1,2 +1,2 @@
 pod "SMReactiveRestKit", :path => "../SMReactiveRestKit.podspec"
-pod 'SMQuickRestKit',:git => 'https://github.com/stefanomondino/SMQuickRestKit.git', :branch => 'master'
+pod 'STMQuickRestKit'

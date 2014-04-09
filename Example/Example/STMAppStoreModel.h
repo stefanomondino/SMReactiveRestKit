@@ -6,9 +6,10 @@
 //  Copyright (c) 2013 Stefano Mondino. All rights reserved.
 //
 
-#import <SMUnsavedModel.h>
+#import "STMSavedModel.h"
 
-@interface SMAppStoreModel : SMUnsavedModel
+@interface STMAppStoreModel : STMSavedModel
 @property (nonatomic,strong) NSString* name;
 @property (nonatomic,strong) NSString* artworkUrl;
+@property (nonatomic,strong) NSString* genre;
 @end
