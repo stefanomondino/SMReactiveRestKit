@@ -119,4 +119,9 @@
 
 
 
+- (RACSignal*) rac_getObjectsAtPathForRouteNamed:(NSString*) routeName object:(id)object parameters:(NSDictionary*) parameters;
+
+- (RACSignal*) rac_getObjectsAtPathForRelationship:(NSString*) relationship object:(id)object method:(RKRequestMethod)method parameters:(NSDictionary*) parameters;
+
+
 @end

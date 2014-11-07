@@ -70,9 +70,9 @@ static const NSString* kSMReactiveRestKitAssociatedProgressBlock = @"kSMReactive
     return [self subscribeNext:nextBlock error:errorBlock progress:progressBlock completed:NULL];
 }
 - (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock error:(void (^)(NSError *error))errorBlock  progress:(void (^)(NSNumber *progress))progressBlock completed:(void (^)(void))completedBlock{
-	RACSubscriber *subscriber = [RACSubscriber subscriberWithNext:nextBlock error:errorBlock completed:completedBlock];
+    RACSubscriber *subscriber = [RACSubscriber subscriberWithNext:nextBlock error:errorBlock completed:completedBlock];
     subscriber.SM_progress = progressBlock;
-	return [self subscribe:subscriber];
+    return [self subscribe:subscriber];
 }
 @end
 #endif
@@ -107,6 +107,33 @@ static const NSString* kSMReactiveRestKitAssociatedProgressBlock = @"kSMReactive
     
 }
 
+- (RACSignal*) rac_getObjectsAtPathForRouteNamed:(NSString*) routeName object:(id)object parameters:(NSDictionary*) parameters {
+     NSURLRequest * request = [self requestWithPathForRouteNamed:routeName object:object parameters:parameters];
+    return [self rac_getObjectsWithRequest:request];
+}
+- (RACSignal*) rac_getObjectsAtPathForRelationship:(NSString*) relationship object:(id)object method:(RKRequestMethod)method parameters:(NSDictionary*) parameters {
+    NSURLRequest * request = [self requestWithPathForRelationship:relationship ofObject:object method:method parameters:parameters];
+    return [self rac_getObjectsWithRequest:request];
+}
+
+- (RACSignal*) rac_getObjectsWithRequest:(NSURLRequest*) request {
+    @weakify(self);
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self);
+        RKObjectRequestOperation* operation = [self objectRequestOperationWithRequest:request success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+            [subscriber sendNext:mappingResult];
+            [subscriber sendCompleted];
+        } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+            [subscriber sendError:error];
+        }];
+        [self enqueueObjectRequestOperation:operation];
+        return [RACDisposable disposableWithBlock:^{
+            [operation cancel];
+        }];
+    }];
+
+}
+
 - (RACSignal*) rac_requestPath:(NSString*) path parameters:(NSDictionary*) parameters method:(RKRequestMethod) method object:(id)object{
     @weakify(self);
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -129,8 +156,8 @@ static const NSString* kSMReactiveRestKitAssociatedProgressBlock = @"kSMReactive
 #endif
         [self enqueueObjectRequestOperation:operation];
         return [RACDisposable disposableWithBlock:^{
-			[operation cancel];
-		}];
+            [operation cancel];
+        }];
     }];
 }
 
