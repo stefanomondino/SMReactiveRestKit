@@ -9,16 +9,6 @@
 #import <RKObjectManager.h>
 #import <ReactiveCocoa.h>
 
-#ifdef SM_EXPERIMENTAL_PROGRESS
-/**
- Additions to RACSignal to include 'sendProgress' method to keep track of download progress during download.
-*/
-@interface RACSignal (SMReactiveRestkit)
-- (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock error:(void (^)(NSError *error))errorBlock  progress:(void (^)(NSNumber *progress))progressBlock ;
-- (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock error:(void (^)(NSError *error))errorBlock  progress:(void (^)(NSNumber *progress))progressBlock completed:(void (^)(void))completedBlock  ;
-@end
-
-#endif
 /**
     ReactiveRestkit implementations.
  */

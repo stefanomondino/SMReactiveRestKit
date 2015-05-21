@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SMReactiveRestKit"
-  s.version          = "0.3.1"
+  s.version          = "0.4"
   s.summary          = "ReactiveCocoa implementation for RestKit"
   s.description      = <<-DESC
                       SMReactiveRestKit brings all the power of RestKit into ReactiveCocoa world. It wraps RKObjectManager into a signal that can be subscribed to.
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'http://www.stefanomondino.com'
 
   s.ios.deployment_target = '6.0'
-  s.osx.deployment_target = '10.7'
+  s.osx.deployment_target = '10.8'
   s.ios.frameworks = 'SystemConfiguration', 'MobileCoreServices'
   s.osx.frameworks = 'SystemConfiguration', 'CoreServices'
   s.prefix_header_contents = <<-EOS
@@ -30,6 +30,5 @@ EOS
   s.source_files = 'Classes'
   s.public_header_files = 'Classes/*.h'
   s.dependency 'ReactiveCocoa'
-  s.dependency 'libextobjc/EXTScope'
   s.dependency 'RestKit'
 end
