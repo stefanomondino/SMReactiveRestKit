@@ -5,10 +5,10 @@
 //  Created by Stefano Mondino on 13/03/14.
 //
 //
-#import "CoreData.h"
+#import <CoreData.h>
 #import "RKObjectManager+ReactiveExtension.h"
-#import "ReactiveCocoa.h"
-#import "EXTScope.h"
+#import <ReactiveCocoa.h>
+#import <EXTScope.h>
 #import <objc/runtime.h>
 
 #ifdef SM_EXPERIMENTAL_PROGRESS
