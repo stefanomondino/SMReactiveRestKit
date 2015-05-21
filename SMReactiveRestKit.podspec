@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SMReactiveRestKit"
-  s.version          = "0.3.0"
+  s.version          = "0.3.1"
   s.summary          = "ReactiveCocoa implementation for RestKit"
   s.description      = <<-DESC
                       SMReactiveRestKit brings all the power of RestKit into ReactiveCocoa world. It wraps RKObjectManager into a signal that can be subscribed to.
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/stefanomondino/SMReactiveRestKit.git", :tag => s.version.to_s }
   s.social_media_url = 'http://www.stefanomondino.com'
 
-  s.ios.deployment_target = '5.0'
+  s.ios.deployment_target = '6.0'
   s.osx.deployment_target = '10.7'
   s.ios.frameworks = 'SystemConfiguration', 'MobileCoreServices'
   s.osx.frameworks = 'SystemConfiguration', 'CoreServices'
