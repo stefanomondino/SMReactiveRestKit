@@ -57,7 +57,7 @@ static const NSString* kSMReactiveRestKitMultipartMIMEType = @"kSMReactiveRestKi
 }
 
 - (RACSignal*) rac_getObjectsWithRequest:(NSURLRequest*) request {
-    __weak RKObjectManager * manager = self;
+    RKObjectManager * __weak manager = self;
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         RKObjectRequestOperation* operation = [manager objectRequestOperationWithRequest:request success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
             [subscriber sendNext:mappingResult];
@@ -74,7 +74,7 @@ static const NSString* kSMReactiveRestKitMultipartMIMEType = @"kSMReactiveRestKi
 }
 
 - (RACSignal*) rac_requestPath:(NSString*) path parameters:(NSDictionary*) parameters method:(RKRequestMethod) method object:(id)object{
-    __weak RKObjectManager * manager = self;
+    RKObjectManager * __weak manager = self;
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 
         
@@ -94,7 +94,7 @@ static const NSString* kSMReactiveRestKitMultipartMIMEType = @"kSMReactiveRestKi
 }
 
 - (RACSignal*) rac_requestPath:(NSString*) path parameters:(NSDictionary*) parameters method:(RKRequestMethod) method multipartDictionary:(NSDictionary*) multipartDataDictionary managed:(BOOL) isManaged object:(id)object{
-    __weak RKObjectManager * manager = self;
+    RKObjectManager * __weak  manager = self;
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         RKObjectRequestOperation *operation = nil;
 
