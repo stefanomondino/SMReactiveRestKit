@@ -6,8 +6,8 @@
 //
 //
 
-#import <RKObjectManager.h>
-#import <ReactiveCocoa.h>
+#import <Restkit/Network/RKObjectManager.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 /**
     ReactiveRestkit implementations.
