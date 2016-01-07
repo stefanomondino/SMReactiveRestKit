@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SMReactiveRestKit"
-  s.version          = "0.5.1"
+  s.version          = "0.5.2"
   s.summary          = "ReactiveCocoa implementation for RestKit"
   s.description      = <<-DESC
                       SMReactiveRestKit brings all the power of RestKit into ReactiveCocoa world. It wraps RKObjectManager into a signal that can be subscribed to.
