@@ -5,7 +5,8 @@
 //  Created by Stefano Mondino on 13/03/14.
 //
 //
-#import <CoreData.h>
+#import <CoreData/CoreData.h>
+#import <RestKit/CoreData/RKManagedObjectStore.h>
 #import "RKObjectManager+ReactiveExtension.h"
 #import <objc/runtime.h>
 

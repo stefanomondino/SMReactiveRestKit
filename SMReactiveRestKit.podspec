@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/stefanomondino/SMReactiveRestKit.git", :tag => s.version.to_s }
   s.social_media_url = 'http://www.stefanomondino.com'
 
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '6.1'
   s.osx.deployment_target = '10.8'
   s.ios.frameworks = 'SystemConfiguration', 'MobileCoreServices'
   s.osx.frameworks = 'SystemConfiguration', 'CoreServices'
