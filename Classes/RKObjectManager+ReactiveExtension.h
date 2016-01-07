@@ -6,7 +6,7 @@
 //
 //
 
-#import <Restkit/Network/RKObjectManager.h>
+#import <RestKit/Network/RKObjectManager.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 /**
